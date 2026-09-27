@@ -1,45 +1,55 @@
-# ECOVERSE • BIODIVERSITY TRAIL
+# ECOVERSE Biodiversity Trail
 
-**Jelajah. Belajar. Lindungi.**
+GitHub Pages-ready package for SKPK Taiping.
 
-Laman interaktif SK Pendidikan Khas Taiping, dengan lapan stesen pembelajaran.
-
-## Struktur laman
+## Struktur
 
 ```text
-index.html
-.nojekyll
-README.md
-stesen-01/index.html   Little Herb Haven
-stesen-02/index.html   Rain Water Harvesting (SPAH)
-stesen-03/index.html   Little Recycle Hub
-stesen-04/index.html   Little STEM Lab
-stesen-04/assets/      10 imej asal Little STEM Lab
-stesen-05/index.html   Little Greens Haven
-stesen-06/index.html   Little Compost Zone
-stesen-07/index.html   Little Bloom Haven
-stesen-08/index.html   Digital Knowledge Hub
+/
+├── index.html
+├── .nojekyll
+├── README.md
+├── stesen-01/index.html
+├── stesen-02/index.html
+├── stesen-03/index.html
+├── stesen-04/index.html
+├── stesen-05/index.html
+├── stesen-06/index.html
+├── stesen-07/index.html
+└── stesen-08/index.html
 ```
 
-Imej halaman lain dibenamkan dalam HTML. Semua fail dalam `stesen-04/assets/` mesti dimuat naik bersama halaman Stesen 04. Tiada proses binaan atau pemasangan pakej diperlukan.
+## Deploy ke GitHub Pages
 
-## GitHub Pages
+Repository:
+`SKPKT/interactive-biodiversity-trail-`
 
-Dalam repository ini, buka **Settings → Pages → Build and deployment**:
+1. Upload **kandungan folder ini terus ke root repository**.
+2. Pastikan `index.html` berada di root, bukan di dalam folder tambahan.
+3. Commit ke branch `main`.
+4. GitHub → Settings → Pages.
+5. Source: **Deploy from a branch**.
+6. Branch: `main`.
+7. Folder: `/ (root)`.
+8. Save.
 
-- Source: **Deploy from a branch**
-- Branch: **main**
-- Folder: **/ (root)**
-- Klik **Save**.
+URL utama:
+`https://skpkt.github.io/interactive-biodiversity-trail-/`
 
-Laman utama: https://skpkt.github.io/interactive-biodiversity-trail-/
+URL stesen:
+- `/stesen-01/`
+- `/stesen-02/`
+- `/stesen-03/`
+- `/stesen-04/`
+- `/stesen-05/`
+- `/stesen-06/`
+- `/stesen-07/`
+- `/stesen-08/`
 
-Stesen boleh dibuka melalui `stesen-01/` hingga `stesen-08/`. Navigasi menggunakan pautan relatif yang menyokong laluan asas repository GitHub Pages.
+## Nota teknikal
 
-## Kandungan dan kemajuan
+- Imej utama telah di-embed ke dalam HTML untuk mengurangkan masalah path.
+- Pautan navigasi stesen menggunakan path relatif.
+- `localStorage` lama bagi beberapa aktiviti dikekalkan untuk keserasian progress sedia ada.
 
-Halaman utama berasal daripada `ECOVERSE_Biodiversity_Trail_GitHub_Ready.zip`; setiap stesen menggunakan ZIP stesen terkini yang dibekalkan. Reka bentuk, perkataan, imej, kuiz, confetti dan tepukan dikekalkan. Pelarasan membaiki pautan navigasi, sasaran pautan portal, dan nama fungsi JavaScript tidak sah pada Stesen 02 supaya interaktiviti asal dapat dijalankan.
-
-Kemajuan disimpan menggunakan kunci `localStorage` asal dalam pelayar dan peranti yang sama. Halaman utama membaca status selesai setiap stesen. Domain pratonton tempatan dan GitHub Pages mempunyai storan yang berasingan.
-
-Stesen 08 mengekalkan Eco Learn, Eco Explorer dan Eco Innovator serta susunan kuiz **Bayam → Bendi → Terung**.
+Stesen 04 menggunakan sepuluh imej asal dalam `stesen-04/assets/`. Imej ini sama tepat dengan imej terbenam dalam ZIP, dan dirujuk sebagai fail berasingan untuk memastikan saiz halaman sesuai untuk muat naik GitHub.
